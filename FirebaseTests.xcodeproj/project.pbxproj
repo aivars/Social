@@ -12,6 +12,7 @@
 		60A46A291ED1E3F200C2D657 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60A46A271ED1E3F200C2D657 /* Main.storyboard */; };
 		60A46A2B1ED1E3F200C2D657 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60A46A2A1ED1E3F200C2D657 /* Assets.xcassets */; };
 		60A46A2E1ED1E3F200C2D657 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60A46A2C1ED1E3F200C2D657 /* LaunchScreen.storyboard */; };
+		60A46A361ED1E41A00C2D657 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 60A46A351ED1E41A00C2D657 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		60A46A2A1ED1E3F200C2D657 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		60A46A2D1ED1E3F200C2D657 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		60A46A2F1ED1E3F200C2D657 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		60A46A351ED1E41A00C2D657 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				60A46A271ED1E3F200C2D657 /* Main.storyboard */,
 				60A46A2A1ED1E3F200C2D657 /* Assets.xcassets */,
 				60A46A2C1ED1E3F200C2D657 /* LaunchScreen.storyboard */,
+				60A46A351ED1E41A00C2D657 /* GoogleService-Info.plist */,
 				60A46A2F1ED1E3F200C2D657 /* Info.plist */,
 			);
 			path = FirebaseTests;
@@ -124,6 +127,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60A46A361ED1E41A00C2D657 /* GoogleService-Info.plist in Resources */,
 				60A46A2E1ED1E3F200C2D657 /* LaunchScreen.storyboard in Resources */,
 				60A46A2B1ED1E3F200C2D657 /* Assets.xcassets in Resources */,
 				60A46A291ED1E3F200C2D657 /* Main.storyboard in Resources */,
