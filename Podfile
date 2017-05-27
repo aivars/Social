@@ -7,4 +7,9 @@ target 'FirebaseTests' do
 
   # Pods for FirebaseTests
 
+  pod 'Firebase/Auth'
+  pod 'Firebase/Core'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Database'
+
 end
