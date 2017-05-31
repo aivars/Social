@@ -68,7 +68,9 @@ class ViewController: UIViewController, UITextViewDelegate {
                         
                         // New user created, log in and create record in the database
                         
-                        self.ref?.child("user").childByAutoId().child("email").setValue(user!.email)
+                        //self.ref?.child("user").childByAutoId().child("email").setValue(user!.email)
+                        
+                        self.ref?.child("user").child(user! .uid).child("email").setValue(user!.email)
                         
                         self.performSegue(withIdentifier: "HomeViewSegue", sender: nil)
                         

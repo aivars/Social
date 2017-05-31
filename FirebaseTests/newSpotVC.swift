@@ -44,6 +44,8 @@ class newSpotVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     
     @IBAction func onSaveButton(_ sender: Any) {
+        // ToDa verifications on image and describtion availability
+        
     }
 
     /*
