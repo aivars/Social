@@ -231,11 +231,30 @@
                         <outlet property="imageView" destination="eoa-xH-0vn" id="NN6-Lu-LRx"/>
                         <outlet property="saveSpot" destination="pzX-mc-dBk" id="n1n-An-VDI"/>
                         <outlet property="textView" destination="fKf-0r-j7R" id="Y3H-RU-WfJ"/>
+                        <segue destination="THr-xJ-Rxw" kind="show" identifier="selectUser" id="qyh-Al-YDc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q6Q-yt-XhQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2537.68115942029" y="118.20652173913044"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="R0A-cT-5wx">
+            <objects>
+                <viewController id="THr-xJ-Rxw" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ae8-me-AXo"/>
+                        <viewControllerLayoutGuide type="bottom" id="lKi-7V-f7f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oU8-VA-0SG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evE-87-SPo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3339" y="118"/>
         </scene>
         <!--Checkout View Controller-->
         <scene sceneID="T2m-b8-yiH">

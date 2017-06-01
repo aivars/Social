@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class newSpotVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
@@ -16,7 +17,7 @@ class newSpotVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     @IBOutlet weak var saveSpot: UIButton!
     
     var imagePicker = UIImagePickerController()
-    
+    var uniqueName = UUID().uuidString
     
     
     
@@ -45,6 +46,16 @@ class newSpotVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
     
     @IBAction func onSaveButton(_ sender: Any) {
         // ToDa verifications on image and describtion availability
+        saveSpot.isEnabled = false
+        
+        let imageToUpload = UIImageJPEGRepresentation(imageView.image!, 0.1)
+        FIRStorage.storage().reference().child("spotImages").child("\(uniqueName).jpg").put(imageToUpload!, metadata: nil, completion: {(metadata, error)in
+            if error != nil {
+                print ("image upload error")
+            }else{
+                self.performSegue(withIdentifier: "selectUser", sender: nil)
+            }
+        })
         
     }
 
