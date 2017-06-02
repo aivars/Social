@@ -53,20 +53,25 @@ class newSpotVC: UIViewController, UIImagePickerControllerDelegate, UINavigation
             if error != nil {
                 print ("image upload error")
             }else{
-                self.performSegue(withIdentifier: "selectUser", sender: nil)
+                self.performSegue(withIdentifier: "selectUser", sender: metadata?.downloadURL()?.absoluteString)
             }
         })
         
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let guest = segue.destination as! SelectUserVC
+        guest.uniqueName = uniqueName
+        guest.detail = description
+        guest.imageURL = sender as! String
+    
     }
-    */
+    
 
 }

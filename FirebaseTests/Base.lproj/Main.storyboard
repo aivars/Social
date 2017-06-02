@@ -238,10 +238,10 @@
             </objects>
             <point key="canvasLocation" x="2537.68115942029" y="118.20652173913044"/>
         </scene>
-        <!--View Controller-->
+        <!--Select UserVC-->
         <scene sceneID="R0A-cT-5wx">
             <objects>
-                <viewController id="THr-xJ-Rxw" sceneMemberID="viewController">
+                <viewController id="THr-xJ-Rxw" customClass="SelectUserVC" customModule="FirebaseTests" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ae8-me-AXo"/>
                         <viewControllerLayoutGuide type="bottom" id="lKi-7V-f7f"/>

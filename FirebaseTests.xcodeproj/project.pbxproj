@@ -12,6 +12,7 @@
 		600ED2C11EDCA8DE008EA4EC /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 600ED2C01EDCA8DE008EA4EC /* CheckoutViewController.swift */; };
 		6053DB7D1EDDC032008A7D87 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6053DB7C1EDDC032008A7D87 /* HomeVC.swift */; };
 		6053DB7F1EDDC0EA008A7D87 /* newSpotVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6053DB7E1EDDC0EA008A7D87 /* newSpotVC.swift */; };
+		6053DB811EE09D19008A7D87 /* SelectUserVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6053DB801EE09D19008A7D87 /* SelectUserVC.swift */; };
 		60A46A241ED1E3F200C2D657 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A46A231ED1E3F200C2D657 /* AppDelegate.swift */; };
 		60A46A261ED1E3F200C2D657 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60A46A251ED1E3F200C2D657 /* ViewController.swift */; };
 		60A46A291ED1E3F200C2D657 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60A46A271ED1E3F200C2D657 /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		600ED2C01EDCA8DE008EA4EC /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		6053DB7C1EDDC032008A7D87 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		6053DB7E1EDDC0EA008A7D87 /* newSpotVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newSpotVC.swift; sourceTree = "<group>"; };
+		6053DB801EE09D19008A7D87 /* SelectUserVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectUserVC.swift; sourceTree = "<group>"; };
 		60A46A201ED1E3F200C2D657 /* FirebaseTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FirebaseTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60A46A231ED1E3F200C2D657 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60A46A251ED1E3F200C2D657 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				600ED2C01EDCA8DE008EA4EC /* CheckoutViewController.swift */,
 				6053DB7C1EDDC032008A7D87 /* HomeVC.swift */,
 				6053DB7E1EDDC0EA008A7D87 /* newSpotVC.swift */,
+				6053DB801EE09D19008A7D87 /* SelectUserVC.swift */,
 			);
 			name = Controler;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				60A46A241ED1E3F200C2D657 /* AppDelegate.swift in Sources */,
 				600ED2BD1EDBC16F008EA4EC /* User.swift in Sources */,
 				6053DB7D1EDDC032008A7D87 /* HomeVC.swift in Sources */,
+				6053DB811EE09D19008A7D87 /* SelectUserVC.swift in Sources */,
 				600ED2C11EDCA8DE008EA4EC /* CheckoutViewController.swift in Sources */,
 				600ED2BF1EDBC189008EA4EC /* Spot.swift in Sources */,
 			);

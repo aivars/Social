@@ -11,7 +11,7 @@ import Foundation
 class Spot {
     
     var uniqueName = ""
-    var fromUser = ""
+    var fromUser = "" 
     var imageURL = ""
     var detail = ""
     var key  = ""
