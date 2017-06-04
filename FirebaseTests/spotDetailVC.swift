@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import Firebase
+import SDWebImage
+
+
 
 class spotDetailVC: UIViewController {
 
@@ -22,7 +26,7 @@ class spotDetailVC: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        //imageView.image = spot.imageURL
+        imageView.sd_setImage(with: URL(string: spot.imageURL))
         spotDetails.text = spot.detail
         from.text = spot.uniqueName
     }
