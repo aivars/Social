@@ -7,13 +7,52 @@
 //
 
 import UIKit
+import Firebase
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var spots : [Spot] = []
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        tableView.dataSource = self
+        tableView.delegate = self
+        
+        // fetch data from firebase
+        FIRDatabase.database().reference().child("user").child(FIRAuth.auth()!.currentUser!.uid).child("spots").observe(.childAdded, with: {(snapshot: FIRDataSnapshot ) in
+            
+            let spot = Spot()
+            
+            if let dictionary = snapshot.value as? NSDictionary {
+                
+                if let imgURL = dictionary["imageURL"] as? String{
+                    spot.imageURL = imgURL
+                }
+                
+                if let frm = dictionary["from"] as? String{
+                    spot.fromUser = frm
+                }
+                if let desc = dictionary["description"] as? String{
+                    spot.detail = desc
+                }
+                if let uniName = dictionary["uniqueName"] as? String{
+                    spot.uniqueName = uniName
+                }
+                spot.key = snapshot.key
+                
+                
+            }
+            
+            self.spots.append(spot)
+            self.tableView.reloadData()
+        
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +60,45 @@ class HomeVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return spots.count
     }
-    */
+    
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell ()
+        
+        let spot = spots[indexPath.row]
+        cell.textLabel?.text = spot.uniqueName
+        
+        print("spot.detail\(spot.detail)")
+        print("spot.uniqueName\(spot.uniqueName)")
+        
+        
+        return cell
+    }
+    
+    
+    // MARK: - Navigation
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let spot = spots[indexPath.row]
+        performSegue(withIdentifier: "viewSpotDetail", sender: spot)
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "viewSpotDetail"{
+            let guest = segue.destination as! spotDetailVC
+            guest.spot = sender as! Spot
+        
+        }
+    }
+    
+    
+    
+    
+
+   
 
 }
