@@ -53,6 +53,19 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             self.tableView.reloadData()
         
         })
+        
+        FIRDatabase.database().reference().child("user").child(FIRAuth.auth()!.currentUser!.uid).child("spots").observe(.childRemoved, with: { (snapshot) in
+            var arrayKey = 0
+            for spot in self.spots{
+                if spot.key == snapshot.key{
+                        self.spots.remove(at: arrayKey)
+                }
+                arrayKey += 1
+            }
+            
+            self.tableView.reloadData()
+        })
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,10 +83,6 @@ class HomeVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         let spot = spots[indexPath.row]
         cell.textLabel?.text = spot.uniqueName
-        
-        print("spot.detail\(spot.detail)")
-        print("spot.uniqueName\(spot.uniqueName)")
-        
         
         return cell
     }

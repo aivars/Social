@@ -4,6 +4,10 @@
 <dict>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Access for photo library is needed to add pictures</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Access to the location is needed to save coordinates</string>
+	<key>NSLocationUsageDescription</key>
+	<string>Your location agent</string>
 	<key>NSContactsUsageDescription</key>
 	<string>Access for camera is needed to add pictures</string>
 	<key>CFBundleDevelopmentRegion</key>

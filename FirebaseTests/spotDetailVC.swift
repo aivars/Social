@@ -37,6 +37,19 @@ class spotDetailVC: UIViewController {
     }
     
     @IBAction func onHideFromList(_ sender: UIButton) {
+        //Dleete from database
+        FIRDatabase.database().reference().child("user").child(FIRAuth.auth()!.currentUser!.uid).child("spots").child(spot.key).removeValue()
+        
+        //delete images from storage
+        FIRStorage.storage().reference().child("spotImages").child("\(spot.uniqueName).jpg").delete { (error) in
+            print ("\(String(describing: error?.localizedDescription))")
+        }
+        
+        //pop the user to the root VC
+        
+        navigationController?.popToRootViewController(animated: true)
+        
+        //reload the table view when child is deleted
     }
 
     /*

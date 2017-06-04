@@ -182,6 +182,9 @@
                                     <constraint firstAttribute="height" constant="40" id="1bV-xy-aI9"/>
                                 </constraints>
                                 <state key="normal" title="Add to favorites"/>
+                                <connections>
+                                    <segue destination="ZCf-xn-XIW" kind="presentation" id="lPK-B4-qft"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -212,6 +215,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J8S-s4-8k9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1760.8695652173915" y="-551.08695652173913"/>
+        </scene>
+        <!--MapVC-->
+        <scene sceneID="2ZR-qo-ITN">
+            <objects>
+                <viewController id="ZCf-xn-XIW" customClass="mapVC" customModule="FirebaseTests" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KgX-XQ-0mw"/>
+                        <viewControllerLayoutGuide type="bottom" id="5kY-eB-iDi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="d8g-id-zf1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="gea-xS-u5p">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gea-xS-u5p" firstAttribute="leading" secondItem="d8g-id-zf1" secondAttribute="leading" id="7ev-y2-sdG"/>
+                            <constraint firstAttribute="trailing" secondItem="gea-xS-u5p" secondAttribute="trailing" id="U45-hW-t3f"/>
+                            <constraint firstItem="gea-xS-u5p" firstAttribute="top" secondItem="KgX-XQ-0mw" secondAttribute="bottom" id="hS1-S7-VK1"/>
+                            <constraint firstItem="5kY-eB-iDi" firstAttribute="top" secondItem="gea-xS-u5p" secondAttribute="bottom" id="jis-RJ-Yny"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="gea-xS-u5p" id="Yof-5B-p77"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pr3-Vt-CA7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2486" y="-551"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="rlb-rG-LS8">
