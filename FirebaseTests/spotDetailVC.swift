@@ -29,6 +29,10 @@ class spotDetailVC: UIViewController {
         imageView.sd_setImage(with: URL(string: spot.imageURL))
         spotDetails.text = spot.detail
         from.text = spot.uniqueName
+        
+        navigationItem.title = "Spot details"
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
     }
 
     override func didReceiveMemoryWarning() {
